@@ -1,9 +1,7 @@
 class CopyableObject():
     def __init__(self, object_name: str) -> None:
         self.obj_name = object_name
-    
-    def copy(self):
-        return objects[self.obj_name](self.data)
+        self.copy = lambda: objects[self.obj_name](self.data)
     
 class License(CopyableObject):
     def __init__(self, data: dict) -> None:
