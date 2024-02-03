@@ -18,3 +18,4 @@ class SQL():
     CREATE TABLE IF NOT EXISTS users
     (key text, username text, first_use int, banned int, uuid text, ip text)
 """)
+        self.conn.commit()
